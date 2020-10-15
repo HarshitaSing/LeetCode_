@@ -1,7 +1,7 @@
 class Solution {
     
-    class pair{
-        
+    class pair
+    {
         int val,index;
         pair(int a ,int b)
         {
@@ -18,7 +18,6 @@ class Solution {
         Stack<pair> stk = new Stack<>();
         int left[] = new int[n];
         int right[] = new int[n];
-        
         int w[] = new int[n];
         
        // <!-  Nearest Smaller Element to Right       
@@ -41,7 +40,7 @@ class Solution {
             
             stk.add(new pair(heights[i],i));
         }
-        stk.clear();
+        stk.clear(); 
     
         // Nearest Smaller Element to Left
         for(int i=0; i < n; i++)
@@ -59,11 +58,10 @@ class Solution {
             }
             else
                 left[i] = stk.peek().index;
-            
             stk.add(new pair(heights[i],i));
         }
          
-         int max = 0;
+        int max = 0;
         for(int i=0;i<n;i++)
         {            
             w[i] = Math.abs(right[i]-left[i])-1;
