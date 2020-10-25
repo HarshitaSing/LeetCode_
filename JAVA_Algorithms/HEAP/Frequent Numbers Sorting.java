@@ -38,11 +38,15 @@ class Solution
   	}
 
   	int res[] = new int[k];
-  	int i=0;
+  	//int i=0;
+
   	while(!max_heap.isEmpty())
   	{
-  		res[i] = max_heap.poll().second;
-  		i++;
+  		int freq = max_heap.poll().first;
+  		int element = max_heap.poll().second;
+  		for(int i=0;i<freq;i++)
+  			res[i] = element;
+  		max_heap.remove();
   	}
 
   	return res;
