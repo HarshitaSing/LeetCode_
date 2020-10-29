@@ -10,7 +10,7 @@ class Solution{
 			min_heap.add(arr[i]);
 		}
 
-		while(min_heap.size>=2)
+		while(min_heap.size() >= 2)
 		{
 			int first = min_heap.poll();
 			int second = min_heap.poll();
